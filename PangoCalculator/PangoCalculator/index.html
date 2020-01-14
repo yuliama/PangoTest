@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Pango Calculator</title>
+
+    <link href="app/css/main.css" rel="stylesheet" />
+
+    <script src="Scripts/angular.min.js"></script>
+    <script src="app/app.js"></script>
+    <script src="app/controllers/calculatorController.js"></script>
+</head>
+
+<body ng-app="calculate" ng-controller="calculatorCtrl">
+    <div class="container body-content">
+        <h1>Calculator</h1>
+        <input type="number" ng-model="num1"/>
+        <select ng-model="op">
+            <option ng-repeat="operator in operators" value="{{$index}}">{{operator.Item2}}</option>
+            <!--<option value="+">+</option>
+    <option value="-">-</option>
+    <option value="*">*</option>
+    <option value="/">/</option>-->
+        </select>
+        <input type="number" ng-model="num2"/>
+        <label>=</label>
+        <input type="text" ng-model="result" disabled class="{{resStyle}}" />
+        <input type="button" value="Calculate" ng-click="postData()" />
+
+    </div>
+</body>
+</html>

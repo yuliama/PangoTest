@@ -1,0 +1,19 @@
+﻿body {
+}
+.container {
+    width: 1600px;
+    margin: auto;
+    padding: 0;
+}
+.red {
+    background-color:red;
+}
+.green {
+    background-color: green;
+}
+.blue {
+    background-color: blue;
+}
+.white {
+    background-color: white;
+}
